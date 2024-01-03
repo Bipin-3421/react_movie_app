@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = " https://api.themoviedb.org/3/configuration";
+const BASE_URL = " https://api.themoviedb.org/3";
 
 // retrieving the tmdb api token from environment variables
 
@@ -13,9 +13,10 @@ const headers = {
   Authorization: "bearer " + TMDB_TOKEN,
 };
 
-export const fetchDataFromApi = async () => {
-  const data = await axios.get(BASE_URL, {
+export const fetchDataFromApi = async (url, params) => {
+  const { data } = await axios.get(BASE_URL + url, {
     headers,
+    params,
   });
 
   return data;
