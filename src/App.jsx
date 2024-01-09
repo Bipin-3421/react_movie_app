@@ -28,6 +28,7 @@ const App = () => {
 
   return (
     <Router>
+      {/* <Header /> */}
       <div>
         <h1>This is testing </h1>
       </div>
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      {/* <Footer /> */}
     </Router>
   );
 };
