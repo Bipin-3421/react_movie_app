@@ -4,7 +4,7 @@ import Trending from "../trending/Trending";
 import "./style.scss";
 const Home = () => {
   return (
-    <div style={{ height: "1000px" }} className="homePage">
+    <div className="homePage">
       <HeroBanner />
       <Trending />
     </div>
