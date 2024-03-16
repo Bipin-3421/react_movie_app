@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import useFetch from "../../../hooks/useFetch";
 import { useNavigate } from "react-router-dom";
 import ContentWrapper from "../../../components/contentwrapper/ContentWrapper";
+import Img from "../../../components/lazyLoadImage/Img";
 const HeroBanner = () => {
   const [background, setBackground] = useState("");
   const { url } = useSelector((state) => state.home);
@@ -24,34 +25,32 @@ const HeroBanner = () => {
   };
 
   return (
-    <div className="heroBanner">
-      <section className="heroContent">
-        <div className="backdrop-img">
-          <img src={background} alt="HeroBanner" />
-        </div>
+    <main className="heroBanner">
+      <div className="backdrop-img">
+        <Img src={background} />
+      </div>
 
-        <div className="opacity-layer"></div>
+      <div className="opacity-layer"></div>
 
-        <ContentWrapper>
-          <div className="heroBannerContent">
-            <span className="title">Welcome Seekers</span>
-            <span className="subTitle">
-              Millions of movies, TV shows and people to discover.Explore now.
-            </span>
+      <ContentWrapper>
+        <section className="heroBannerContent">
+          <span className="title">Welcome Seekers</span>
+          <span className="subTitle">
+            Millions of movies, TV shows and people to discover.Explore now.
+          </span>
 
-            <form className="searchInput">
-              <input
-                type="text"
-                value={query}
-                placeholder="Search for a movie or tv show...."
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              <button onClick={inputSearchHandler}>Search</button>
-            </form>
-          </div>
-        </ContentWrapper>
-      </section>
-    </div>
+          <form className="searchInput">
+            <input
+              type="text"
+              value={query}
+              placeholder="Search for a movie or tv show...."
+              onChange={(e) => setQuery(e.target.value)}
+            />
+            <button onClick={inputSearchHandler}>Search</button>
+          </form>
+        </section>
+      </ContentWrapper>
+    </main>
   );
 };
 

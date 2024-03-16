@@ -5,7 +5,7 @@ const Carousel = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);
   return (
     <div>
-      <section style={{ display: "flex", gap: "10px" }}>
+      <section style={{ display: "flex", gap: "10px", overflowY: "hidden" }}>
         {data?.map((data, loading) => (
           <span key={data.id}>
             <img

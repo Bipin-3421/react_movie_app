@@ -3,7 +3,7 @@ import SwitchTabs from "../../components/switchTabs/SwitchTabs";
 import useFetch from "../../hooks/useFetch";
 import { useSelector } from "react-redux";
 import Carousel from "../../components/carousel/Carousel";
-
+import ContentWrapper from "../../components/contentwrapper/ContentWrapper";
 const Trending = () => {
   const [endPoint, setEndPoint] = useState("day");
   const { data, loading } = useFetch(`/trending/all/${endPoint}`);
@@ -14,10 +14,12 @@ const Trending = () => {
     setEndPoint(tab === "Day" ? "day" : "week");
   };
   return (
-    <div>
-      Trending
-      <SwitchTabs data={["Day", "Week"]} onTabHandler={onTabHandler} />
-      {/* <Carousel data={data?.results} /> */}
+    <div className="carouselSection">
+      <ContentWrapper>
+        <span className="carouselTitle">Trending</span>
+        <SwitchTabs data={["Day", "Week"]} onTabHandler={onTabHandler} />
+      </ContentWrapper>
+      <Carousel data={data?.results} />
     </div>
   );
 };
