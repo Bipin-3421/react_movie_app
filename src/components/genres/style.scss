@@ -1,0 +1,14 @@
+.genres {
+  display: flex;
+  gap: 5px;
+  .genre {
+    background-color: var(--pink);
+    padding: 3px 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+    white-space: nowrap;
+  }
+}
+//white-space
+//text is lengthy so to prevent from breaking into new line as a result for being into same line we use this property

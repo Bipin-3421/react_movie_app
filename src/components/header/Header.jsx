@@ -9,6 +9,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import { FaHamburger } from "react-icons/fa";
 const Header = () => {
   const navigate = useNavigate();
+  const [show, setShow] = useState("top");
   const [mobileMenu, setMobileMenu] = useState(false);
   const navigationHandler = (type) => {
     if (type === "movies") {
@@ -23,7 +24,7 @@ const Header = () => {
   // };
 
   return (
-    <header className={`header ${mobileMenu ? "mobileView" : ""} `}>
+    <header className={`header ${mobileMenu ? "mobileView" : ""} top `}>
       <ContentWrapper>
         <div className="logo">
           <img src={logo} alt="Logo" onClick={() => navigate("/")} />

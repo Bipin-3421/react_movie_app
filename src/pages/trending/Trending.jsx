@@ -16,7 +16,7 @@ const Trending = () => {
   return (
     <div className="carouselSection">
       <ContentWrapper>
-        <span className="carouselTitle">Trending</span>
+        <span className="carouselTitle">Trending </span>
         <SwitchTabs data={["Day", "Week"]} onTabHandler={onTabHandler} />
       </ContentWrapper>
       <Carousel data={data?.results} />
