@@ -2,8 +2,9 @@ import React from "react";
 import { useSelector } from "react-redux";
 import "./style.scss";
 const Genres = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   const { genres } = useSelector((state) => state.home);
+  console.log(genres);
   return (
     <div className="genres">
       {data?.map((genre) => {

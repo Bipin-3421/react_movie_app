@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Home from "./pages/home/Home";
-import About from "./pages/about/About";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { fetchDataFromApi } from "../utils/api";
@@ -42,7 +41,7 @@ const App = () => {
     let allGenres = {};
 
     endPoints.forEach((url) => {
-      return promises.push(fetchDataFromApi(`/genre/${url}/list`));
+       promises.push(fetchDataFromApi(`/genre/${url}/list`));
     });
     const data = await Promise.all(promises);
 
@@ -59,7 +58,6 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
         <Route path="/:mediaType/:id" element={<Details />} />
         <Route path="/explore/:mediaType" element={<Explore />} />
       </Routes>

@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   url: {},
+  genres:{}
 };
 
 export const homeSlice = createSlice({

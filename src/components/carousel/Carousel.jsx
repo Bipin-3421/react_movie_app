@@ -8,21 +8,21 @@ const Carousel = ({ data, loading, endpoint }) => {
   return (
     <div>
       <section style={{ display: "flex", gap: "10px", overflowY: "hidden" }}>
-        {data?.map((data, loading) => (
+        {data?.map((item, loading) => (
           <div
-            key={data.id}
+            key={item.id}
             onClick={() =>
-              navigate(`/${data.media_type || endpoint}/${data.id}`)
+              navigate(`/${item.media_type || endpoint}/${item.id}`)
             }
           >
             <span>
               <img
-                src={url.poster + data?.poster_path}
+                src={url.poster + item?.poster_path}
                 alt="Poster"
                 style={{ width: 200 }}
               />
-              <Genres data={data?.genre_ids.slice(0, 2)} />
-              <span style={{ color: "#fff" }}>{data.title || data.name}</span>
+              <Genres data={item.genre_ids.slice(0, 2)} />
+              <span style={{ color: "#fff" }}>{item.title || item.name}</span>
             </span>
           </div>
         ))}
