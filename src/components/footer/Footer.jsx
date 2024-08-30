@@ -27,6 +27,16 @@ const Footer = () => {
           review
         </div>
         <div className="socialIcons">
+          <span>created by:</span>
+          <div>
+            <a
+              href="https://portfolio-me-gamma-six.vercel.app/"
+              target="_blank"
+              className="icon"
+            >
+              Lee
+            </a>
+          </div>
           <span className="icon">
             <FaFacebookF />
           </span>
