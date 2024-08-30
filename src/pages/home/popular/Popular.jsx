@@ -5,7 +5,7 @@ import Carousel from "../../../components/carousel/Carousel";
 import SwitchTabs from "../../../components/switchTabs/SwitchTabs";
 
 import useFetch from "../../../hooks/useFetch";
-import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../../components/contentwrapper/ContentWrapper";
 
 const Popular = () => {
   const [endpoint, setEndpoint] = useState("movie");

@@ -10,7 +10,7 @@ import { fetchDataFromApi } from "../../utils/api";
 
 import MovieCard from "../../components/movieCard/MovieCard";
 import Spinner from "../../components/spinner/Spinner";
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
+import ContentWrapper from "../../components/contentwrapper/ContentWrapper";
 
 let filters = {};
 
