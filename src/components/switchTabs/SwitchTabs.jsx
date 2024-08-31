@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.scss";
 
-const SwitchTabs = ({ data, onTabHandler }) => {
+const SwitchTabs = ({ data, onTabChange }) => {
   const [selectedTab, setSelectedTab] = useState(0);
   const [left, setLeft] = useState(0);
 
@@ -10,7 +10,7 @@ const SwitchTabs = ({ data, onTabHandler }) => {
     setTimeout(() => {
       setSelectedTab(index);
     }, 500);
-    onTabHandler(tab, index);
+    onTabChange(tab, index);
   };
   return (
     <div className="switchingTabs">

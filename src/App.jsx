@@ -3,7 +3,7 @@ import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PageNotFound from "./pages/404/PageNotFound";
 import { useDispatch, useSelector } from "react-redux";
-import { getApiConfiguration, getGenres } from "../store/homeSlice";
+import { getApiConfiguration, getGenres } from "./store/homeSlice";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Explore from "./pages/explore/Explore";
@@ -13,7 +13,6 @@ import SearchResult from "./pages/searchResult/SearchResult";
 
 const App = () => {
   const dispatch = useDispatch();
-  const { url } = useSelector((state) => state.home);
 
   useEffect(() => {
     fetchApiConfig();
